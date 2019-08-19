@@ -166,6 +166,18 @@ public class GildedRoseTest {
         //then
         Assert.assertEquals(50,items[0].quality);
     }
+    @Test
+    public void should_return_50_given_a_Backstage_item_its_sellIn_is_6_quality_is_48(){
+        //given
+        Item[] items = {new Item("Backstage passes to a TAFKAL80ETC concert",6,48)};
+        GildedRose gildedRose = new GildedRose(items);
+
+        //when
+        gildedRose.updateQuality();
+
+        //then
+        Assert.assertEquals(50,items[0].quality);
+    }
 
 
 }
