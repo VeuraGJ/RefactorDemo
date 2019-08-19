@@ -20,7 +20,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void should_return_7_given_a_normal_item_its_sellIn_is_8_quality_is_0(){
+    public void should_return_0_given_a_normal_item_its_sellIn_is_8_quality_is_0(){
         //given
         Item[] items = {new Item("Noraml",8,0)};
         GildedRose gildedRose = new GildedRose(items);
@@ -29,7 +29,8 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(7,items[0].sellIn);
+        Assert.assertEquals(0,items[0].quality);
     }
+
 
 }
