@@ -16,7 +16,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(9,items[0].quality);
+        Assert.assertEquals(9,items[0].getQuality());
     }
 
 
@@ -30,7 +30,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(0,items[0].quality);
+        Assert.assertEquals(0,items[0].getQuality());
     }
     @Test
     public void should_return_10_given_a_Sulfuras_item_its_sellIn_is_8_quality_is_10(){
@@ -42,7 +42,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(10,items[0].quality);
+        Assert.assertEquals(10,items[0].getQuality());
     }
     @Test
     public void should_return_8_given_a_normal_item_its_sellIn_is_0_quality_is_10(){
@@ -54,7 +54,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(8,items[0].quality);
+        Assert.assertEquals(8,items[0].getQuality());
     }
     @Test
     public void should_return_0_given_a_normal_item_its_sellIn_is_0_quality_is_1(){
@@ -66,7 +66,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(0,items[0].quality);
+        Assert.assertEquals(0,items[0].getQuality());
     }
     @Test
     public void should_return_9_given_a_normal_item_its_sellIn_is_1_quality_is_10(){
@@ -78,7 +78,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(9,items[0].quality);
+        Assert.assertEquals(9,items[0].getQuality());
     }
     @Test
     public void should_return_10_given_a_Sulfuras_item_its_sellIn_is_negative_1_quality_is_10(){
@@ -90,7 +90,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(10,items[0].quality);
+        Assert.assertEquals(10,items[0].getQuality());
     }
     @Test
     public void should_return_50_given_a_Aged_Brie_item_its_sellIn_is_8_quality_is_50(){
@@ -102,7 +102,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(50,items[0].quality);
+        Assert.assertEquals(50,items[0].getQuality());
     }
     @Test
     public void should_return_50_given_a_Aged_Brie_item_its_sellIn_is_0_quality_is_50(){
@@ -114,7 +114,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(50,items[0].quality);
+        Assert.assertEquals(50,items[0].getQuality());
     }
 
     @Test
@@ -127,7 +127,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(50,items[0].quality);
+        Assert.assertEquals(50,items[0].getQuality());
     }
     @Test
     public void should_return_50_given_a_Aged_Brie_item_its_sellIn_is_0_quality_is_49(){
@@ -139,7 +139,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(50,items[0].quality);
+        Assert.assertEquals(50,items[0].getQuality());
     }
 
     @Test
@@ -152,7 +152,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(49,items[0].quality);
+        Assert.assertEquals(49,items[0].getQuality());
     }
 
     @Test
@@ -165,7 +165,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(49,items[0].quality);
+        Assert.assertEquals(49,items[0].getQuality());
     }
     @Test
     public void should_return_50_given_a_Backstage_item_its_sellIn_is_10_quality_is_48(){
@@ -177,7 +177,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(50,items[0].quality);
+        Assert.assertEquals(50,items[0].getQuality());
     }
     @Test
     public void should_return_49_given_a_Backstage_item_its_sellIn_is_6_quality_is_47(){
@@ -189,7 +189,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(49,items[0].quality);
+        Assert.assertEquals(49,items[0].getQuality());
     }
     @Test
     public void should_return_50_given_a_Backstage_item_its_sellIn_is_5_quality_is_47(){
@@ -201,7 +201,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(50,items[0].quality);
+        Assert.assertEquals(50,items[0].getQuality());
     }
 
     @Test
@@ -214,7 +214,7 @@ public class GildedRoseTest {
         gildedRose.updateQuality();
 
         //then
-        Assert.assertEquals(0,items[0].quality);
+        Assert.assertEquals(0,items[0].getQuality());
     }
 
 

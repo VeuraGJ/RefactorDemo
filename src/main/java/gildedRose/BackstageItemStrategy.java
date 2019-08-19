@@ -3,23 +3,23 @@ package gildedRose;
 public class BackstageItemStrategy extends ItemStrategy {
     @Override
     public void updateQuality(Item item) {
-        if (item.quality < 50) {
-            item.quality = item.quality + 1;
-            if (item.sellIn < 11) {
-                    if (item.quality < 50) {
-                        item.quality = item.quality + 1;
+        if (item.getQuality() < 50) {
+            item.setQuality(item.getQuality()+1);
+            if (item.getSellIn() < 11) {
+                    if (item.getQuality() < 50) {
+                        item.setQuality(item.getQuality()+1);
                     }
                 }
 
-                if (item.sellIn < 6) {
-                    if (item.quality < 50) {
-                        item.quality = item.quality + 1;
-                    }
+            if (item.getSellIn() < 6) {
+                if (item.getQuality() < 50) {
+                    item.setQuality(item.getQuality()+1);
                 }
             }
-        item.sellIn = item.sellIn - 1;
-        if (item.sellIn < 0) {
-            item.quality = item.quality - item.quality;
+            }
+        item.setSellIn(item.getSellIn()-1);
+        if (item.getSellIn() < 0) {
+            item.setQuality(0);
         }
     }
 }
