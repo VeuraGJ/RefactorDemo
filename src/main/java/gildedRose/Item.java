@@ -11,20 +11,26 @@ public class Item {
     private ItemStrategy itemStrategy;
 
     public Item(String name, int sellIn, int quality) {
-        this.name = name;
+        setItemStrategy(name);
         this.sellIn = sellIn;
         this.quality = quality;
     }
-    public void updateQuality(){
-        if (name.equals("Aged Brie")) {
-           itemStrategy = new AgedBrieItemStrategy();
-        } else if(name.equals("Backstage passes to a TAFKAL80ETC concert")){
-            itemStrategy = new BackstageItemStrategy();
-        }else if(name.equals("Sulfuras, Hand of Ragnaros")){
-            itemStrategy = new SulfurasItemStrategy();
-        }else {
-            itemStrategy = new NormalItemStrategy();
+    private void setItemStrategy(String name){
+        switch (name){
+            case "Aged Brie":
+                itemStrategy = new AgedBrieItemStrategy();
+                break;
+            case "Backstage passes to a TAFKAL80ETC concert":
+                itemStrategy = new BackstageItemStrategy();
+                break;
+            case "Sulfuras, Hand of Ragnaros":
+                itemStrategy = new SulfurasItemStrategy();
+                break;
+            default:
+                itemStrategy = new NormalItemStrategy();
         }
+    }
+    public void updateQuality(){
         itemStrategy.updateQuality(this);
     }
 
